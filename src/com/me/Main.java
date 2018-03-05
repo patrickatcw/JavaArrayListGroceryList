@@ -61,7 +61,7 @@ public class Main {
 
     //step 12 print instructions method
     public static void printInstructions() {
-
+        //these will be menu options as to what the user wants to do throughout program
         System.out.println("\nPress ");
         System.out.println("\t 0 - To print choice options. ");
         System.out.println("\t 1 - To print the list of grocery items. ");
@@ -72,6 +72,14 @@ public class Main {
         System.out.println("\t 6 - To quit the application. ");
 
     }
+
+    //step 13 method to add item
+    public static void addItem() {
+        System.out.print("Please enter the grocery item: ");  //got rid on ln so print on same line
+        groceryList.addGroceryItem(scanner.nextLine());       //adding that as an item to our arraylist
+
+    }
+
 
 
 }
