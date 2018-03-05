@@ -15,6 +15,11 @@ public class GroceryList {
     //note, (), can have it's own constructor
     private ArrayList<String> groceryList = new ArrayList<>();
 
+    //step 3 method for adding grocery item
+    public void addGroceryItem(String item){
+
+
+    }
 
 
 }
