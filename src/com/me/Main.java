@@ -96,7 +96,7 @@ public class Main {
         System.out.println("Enter item name: ");
         int itemNo = scanner.nextInt();
         scanner.nextLine();
-        groceryList.removeGroceryItem(itemNo);   //no - 1 here
+        groceryList.removeGroceryItem(itemNo - 1);
 
     }
 
