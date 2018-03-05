@@ -13,17 +13,28 @@ public class GroceryList {
     //can hold objects, in case here we are using String
     //creating an arrow list below, arraylist is actually a class,
     //note, (), can have it's own constructor
+
+    //in conjunction with step 4
     private ArrayList<String> groceryList = new ArrayList<>();
 
     //step 3 method for adding grocery item
     public void addGroceryItem(String item){
 
-        //step 4 (with arraylist, jva does this for us with .add)
-        groceryList.add(item);
-
-
+        //step 4 (with arraylist, java does this for us with .add)
+        groceryList.add(item);  //adding an item
 
     }
+
+    //step 5 method to print grocery list
+        public void printGroceryList(){
+            System.out.println("You have " + groceryList.size() +   //size will return how many elements in the array list
+            " items in your grocery list.");
+            for(int i = 0; i < groceryList.size(); i++){
+                System.out.println((i + 1) + ". " + groceryList.get(i)); //get method java
+            }
+
+
+        }
 
 
 }
