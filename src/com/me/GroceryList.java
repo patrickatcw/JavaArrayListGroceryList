@@ -42,4 +42,11 @@ public class GroceryList {
 
         }
 
+        //step 7 method to remove grocery item
+        public void removeGroceryItem(int position){
+        String theItem = groceryList.get(position); //retrieve the item first and tell which item has been modified
+        groceryList.remove(position);
+
+        }
+
 }
