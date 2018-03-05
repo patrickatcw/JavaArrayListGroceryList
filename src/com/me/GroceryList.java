@@ -18,7 +18,7 @@ public class GroceryList {
     private ArrayList<String> groceryList = new ArrayList<>();
 
     //step 3 method for adding grocery item
-    public void addGroceryItem(String item){
+    public void addGroceryItem(String item) {
 
         //step 4 (with arraylist, java does this for us with .add)
         groceryList.add(item);  //adding an item
@@ -26,27 +26,39 @@ public class GroceryList {
     }
 
     //step 5 method to print grocery list
-        public void printGroceryList() {
-            System.out.println("You have " + groceryList.size() +   //size will return how many elements in the array list
-                    " items in your grocery list.");
-            for (int i = 0; i < groceryList.size(); i++) {
-                System.out.println((i + 1) + ". " + groceryList.get(i)); //get method java
-            }
-
+    public void printGroceryList() {
+        System.out.println("You have " + groceryList.size() +   //size will return how many elements in the array list
+                " items in your grocery list.");
+        for (int i = 0; i < groceryList.size(); i++) {
+            System.out.println((i + 1) + ". " + groceryList.get(i)); //get method java
         }
 
-        //step 6 method to modify grocery item
-        public void modifyGroceryItem(int position, String newItem) {
-            groceryList.set(position, newItem);
-            System.out.println("Grocery item " + (position + 1) + " has been changed.");
+    }
 
-        }
+    //step 6 method to modify grocery item
+    public void modifyGroceryItem(int position, String newItem) {
+        groceryList.set(position, newItem);
+        System.out.println("Grocery item " + (position + 1) + " has been changed.");
 
-        //step 7 method to remove grocery item
-        public void removeGroceryItem(int position){
+    }
+
+    //step 7 method to remove grocery item
+    public void removeGroceryItem(int position) {
         String theItem = groceryList.get(position); //retrieve the item first and tell which item has been modified
         groceryList.remove(position);
 
+    }
+
+    //step 8 need a method to query list
+    public String findItem(String searchItem) {
+        int position = groceryList.indexOf(searchItem); //index part of java
+        if(position >= 0){
+            return groceryList.get(position);
         }
+
+        return null;
+
+
+    }
 
 }
