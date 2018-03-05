@@ -96,9 +96,28 @@ public class Main {
         System.out.println("Enter item name: ");
         int itemNo = scanner.nextInt();
         scanner.nextLine();
-        groceryList.removeGroceryItem(itemNo);
+        groceryList.removeGroceryItem(itemNo);   //no - 1 here
 
     }
+
+    //step 16 method to search for item
+    public static void searchForItem() {
+        System.out.println("Item to search for: ");
+        String searchItem = scanner.nextLine();
+        if (groceryList.findItem(searchItem) != null) {
+            System.out.println("Found " + searchItem + " in our grocery list");
+        } else {
+            System.out.println(searchItem + ", is not in the shopping list.");
+
+            //step 17 run program
+
+
+
+        }
+
+    }
+
+
 
 
 }
