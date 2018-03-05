@@ -26,15 +26,20 @@ public class GroceryList {
     }
 
     //step 5 method to print grocery list
-        public void printGroceryList(){
+        public void printGroceryList() {
             System.out.println("You have " + groceryList.size() +   //size will return how many elements in the array list
-            " items in your grocery list.");
-            for(int i = 0; i < groceryList.size(); i++){
+                    " items in your grocery list.");
+            for (int i = 0; i < groceryList.size(); i++) {
                 System.out.println((i + 1) + ". " + groceryList.get(i)); //get method java
             }
 
-
         }
 
+        //step 6 method to modify grocery item
+        public void modifyGroceryItem(int position, String newItem) {
+            groceryList.set(position, newItem);
+            System.out.println("Grocery item " + (position + 1) + " has been changed.");
+
+        }
 
 }
