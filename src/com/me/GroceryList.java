@@ -35,30 +35,69 @@ public class GroceryList {
 
     }
 
+    //step 18 modify grocery item
+    public void modifyGroceryItem(String currentItem, String newItem){
+
+        int position = findItem(currentItem);
+        if(position >= 0) {
+            modifyGroceryItem(position, newItem);
+        }
+
+    }
+
     //step 6 method to modify grocery item
-    public void modifyGroceryItem(int position, String newItem) {
+    private void modifyGroceryItem(int position, String newItem) {
         groceryList.set(position, newItem);
         System.out.println("Grocery item " + (position + 1) + " has been changed.");
 
     }
 
+    //step 19 overloading removeGroceryitem method
+    public void removeGroceryItem(String item){
+        int position = findItem(item);
+        if(position >= 0) {
+            removeGroceryItem(position);
+        }
+
+    }
+
+
     //step 7 method to remove grocery item
-    public void removeGroceryItem(int position) {
-        String theItem = groceryList.get(position); //retrieve the item first and tell which item has been modified
+    private void removeGroceryItem(int position) {
         groceryList.remove(position);
 
     }
 
     //step 8 need a method to query list
-    public String findItem(String searchItem) {
+    /*public String findItem(String searchItem) {
         int position = groceryList.indexOf(searchItem); //index part of java
         if(position >= 0){
             return groceryList.get(position);
         }
 
         return null;
+        //now go to step 9 to main for running program*/
 
-        //now go to step 9 to main for running program
+    //replace the immediate above with this
+    private int findItem(String searchItem){
+        return groceryList.indexOf(searchItem);
+
+
     }
+
+    //step 21 back from main to create a method
+    public boolean onFile(String searchItem){
+
+        int position = findItem(searchItem);
+        if(position >= 0){
+            return true;
+        }
+
+        return false;
+
+        //now go back to main
+
+    }
+
 
 }
