@@ -18,6 +18,10 @@ public class GroceryList {
     //step 3 method for adding grocery item
     public void addGroceryItem(String item){
 
+        //step 4 (with arraylist, jva does this for us with .add)
+        groceryList.add(item);
+
+
 
     }
 
