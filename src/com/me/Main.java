@@ -80,6 +80,25 @@ public class Main {
 
     }
 
+    //step 14 method to modify item
+    public static void modifyItem() {
+        System.out.print("Enter item name: ");
+        int itemNo = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Enter replacement item: ");
+        String newItem = scanner.nextLine();
+        groceryList.modifyGroceryItem(itemNo-1, newItem); //- 1 to access to correct element
+
+    }
+
+    //step 15 method to remove item
+    public static void removeItem() {
+        System.out.println("Enter item name: ");
+        int itemNo = scanner.nextInt();
+        scanner.nextLine();
+        groceryList.removeGroceryItem(itemNo);
+
+    }
 
 
 }
